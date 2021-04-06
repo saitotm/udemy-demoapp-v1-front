@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/sass/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -47,6 +48,8 @@ export default {
   axios: {},
 
   vuetify: {
+    treeShake: true,
+    customVariables: ['~/assets/sass/variable.scss'], // treeShakeがtrueの場合のみ有効
     theme: {
       themes: {
         light: {
@@ -59,7 +62,7 @@ export default {
         }
       }
     }
-  },
+  }, 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
