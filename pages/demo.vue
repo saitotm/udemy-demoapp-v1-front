@@ -76,7 +76,7 @@
       </v-card-title>
       <v-card-text>
         <v-simple-table dense>
-          <template>
+          <div>
             <thead>
               <tr>
                 <th>en</th>
@@ -92,7 +92,7 @@
                 <td>{{ $t(`title.${path}`) }}</td>
               </tr>
             </tbody>
-          </template>
+          </div>
         </v-simple-table>
       </v-card-text>
     </v-card>
