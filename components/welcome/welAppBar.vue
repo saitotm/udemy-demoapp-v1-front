@@ -25,7 +25,6 @@
         {{ $t(`menus.${menu.title}`) }}
       </v-btn>
     </v-toolbar-items>
-    {{ isScrollPoint }}
   </v-app-bar>
 </template>
 
