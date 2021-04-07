@@ -61,26 +61,28 @@
         </v-row>
       </v-container>
     </v-sheet>
-    <bef-login-fotter />
+    <bef-login-footer />
   </v-app>
 </template>
 
 <script>
+import welAbout from '~/components/welcome/welAbout.vue'
 import welAppBar from '~/components/welcome/welAppBar.vue'
 import welProducts from '~/components/welcome/welProducts.vue'
 import welPrice from '~/components/welcome/welPrice.vue'
 import welContact from '~/components/welcome/welContact.vue'
 import welCompany from '~/components/welcome/welCompany.vue'
-import befLoginFotter from '~/components/beforeLogin/befLoginFotter.vue'
+import befLoginFooter from '~/components/beforeLogin/befLoginFooter.vue'
 
 export default {
   components: {
+    welAbout,
     welAppBar,
     welProducts,
     welPrice,
     welContact,
     welCompany,
-    befLoginFotter
+    befLoginFooter
   },
   data () {
     return {
