@@ -9,31 +9,40 @@
     <app-logo
       @click.native="goTo('scroll-top')"
     />
-    <v-toolbar-title>
+    <v-toolbar-title
+      class="hidden-mobile-and-down"
+    >
       {{ appName }}
     </v-toolbar-title>
 
     <v-spacer />
 
-    <v-toolbar-items class="ml-2">
+    <v-toolbar-items class="ml-2 hidden-ipad-and-down">
       <v-btn
         v-for="(menu, i) in menus"
         :key="`menu-btn-${i}`"
         text
+        :class="{ 'hidden-sm-and-down': (menu.title === 'about') }"
         @click="goTo(menu.title)"
       >
         {{ $t(`menus.${menu.title}`) }}
       </v-btn>
     </v-toolbar-items>
+    <signup-link />
+    <login-link />
   </v-app-bar>
 </template>
 
 <script>
+import loginLink from '../beforeLogin/loginLink.vue'
+import signupLink from '../beforeLogin/signupLink.vue'
 import appLogo from '~/components/ui/appLogo.vue'
 
 export default {
   components: {
-    appLogo
+    appLogo,
+    signupLink,
+    loginLink
   },
   props: {
     menus: {
