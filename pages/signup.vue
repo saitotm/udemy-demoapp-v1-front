@@ -41,7 +41,6 @@ export default {
   data () {
     return {
       isValid: false,
-      loading: false,
       params: { user: { name: '', email: '', password: '' } }
     }
   },
