@@ -4,11 +4,10 @@
     <v-main>
       <nuxt />
     </v-main>
-  </v-app> 
+  </v-app>
 </template>
 
 <script>
 export default {
-  
 }
 </script>
